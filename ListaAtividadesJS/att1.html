@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 1</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            height: 100vh;
+        }
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #lista{
+            margin-top: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="ListarPares()">Listar</button>
+    <div id="lista"></div>
+    <script>
+        function ListarPares(){
+            let c = 0;
+            let list = document.getElementById('lista');
+            while(c < 101){
+                c++;
+                if(c % 2 == 0){
+                    console.log(c);
+                    list.innerHTML += " "+c;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
